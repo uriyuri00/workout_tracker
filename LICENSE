@@ -1,6 +1,9 @@
 MIT License
 
-Copyright (c) 2023 silvam22
+Copyright (c) 2023 silvam22Workout tracker: An application that takes in user input to track workouts effectively
+Classes for trainer, person exercising (trainee)
+Saves data from user about workouts history
+Trainers can post comments about trainee's work outs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
