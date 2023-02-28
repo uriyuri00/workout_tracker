@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Trainer extends Model {}
-
+ 
 Trainer.init (
     {
         id: {
