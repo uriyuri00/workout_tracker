@@ -1,7 +1,7 @@
-// const User = require("./user");
-const Post = require("./post");
-const Trainer = require("./trainer")
-const Comment = require("./comment")
+const User = require("./User");
+const Post = require("./Post");
+const Trainer = require("./Trainer")
+const Comment = require("./Comment")
 
  User.hasMany(Post, {
     foreignKey: "user_id",
