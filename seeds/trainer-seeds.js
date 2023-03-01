@@ -1,6 +1,6 @@
 const { Trainer } = require("../models");
 
-const postData = [
+const trainerData = [
   {
     specialty: "Fitness Nutrition (most popular), Functional Training, Weight Management, Senior Fitness, Behavior Change, Youth Fitness, Sports Performance, Orthopedic Exercise, Pain-Free Movement, Functional Aging, Cancer Exercise, Functional Aging Group Exercise, Corrective Exercise",
     certification: "ACE",
@@ -28,6 +28,6 @@ const postData = [
   },
 ];
 
-const seedPosts = () => Post.bulkCreate(postData);
+const seedPosts = () => Trainer.bulkCreate(trainerData);
 
 module.exports = seedPosts;

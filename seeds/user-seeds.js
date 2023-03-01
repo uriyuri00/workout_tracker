@@ -14,12 +14,6 @@ const userData = [
     trainer: true
   },
   {
-    username: "Ronald",
-    email: "RonaldClark@gmail.com",
-    password: "3apr1981",
-    trainer: false
-  },
-  {
     username: "Lisa",
     email: "LisaMitchell@gmail.com",
     password: "4apr1981",
