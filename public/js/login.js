@@ -2,20 +2,21 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-  
-    if (email && password) {
+    const email = document.querySelector('#inputEmail3').value.trim();
+    const password = document.querySelector('#inputPassword3').value.trim();
+    const username = document.querySelector('#inputUsername3').value.trim();
+
+    if (email && password && username) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, username }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/dashboard');
+        document.location.replace('/dashboardcd');
       } else {
         alert(response.statusText);
       }
