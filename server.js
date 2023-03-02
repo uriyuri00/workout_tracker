@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express');
 const session = require('express-session');
 const expresshbs = require('express-handlebars')
-const routes = require('./routes')
+const routes = require('./controllers')
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 

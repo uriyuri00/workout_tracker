@@ -1,6 +1,6 @@
-const router = require('express').Router()
-const publicRoutes = require('./public')
+// const router = require('express').Router()
+// const publicRoutes = require('./public')
 
-router.use(publicRoutes)
+// router.use(publicRoutes)
 
-module.exports = router
+// module.exports = router
