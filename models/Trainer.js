@@ -12,7 +12,7 @@ Trainer.init (
             autoIncrement: true,
         },
         specialty: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT('long'),
             allowNull: false,
         },
         certification: {
