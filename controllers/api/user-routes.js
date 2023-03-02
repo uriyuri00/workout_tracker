@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User, Post, Comment, Trainer } = require('../../models');
-const session = require('express-session');
+const { User, Post, Comment } = require('../../models');
+// const session = require('express-session');
 const withAuth = require('../../utils/auth');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 router.get('/', (req, res) => {
@@ -27,10 +27,10 @@ router.get('/:id', (req, res) => {
           model: Post,
           attributes: ['id', 'title', 'body', 'created_at']
         },
-        {
+       /* {
           model: Trainer,
           attributes:['specialty','certification']
-        },
+        },*/
         {
             model: Comment,
             attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
