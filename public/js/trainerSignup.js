@@ -11,14 +11,14 @@ const trainerSignupFormHandler = async (event) => {
 
   
     if (username && email && password && certification && speciatly) {
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({ username, email, password,certification,speciatly }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
@@ -26,5 +26,5 @@ const trainerSignupFormHandler = async (event) => {
   };
 
   document
-  .querySelector('#signup-form')
+  .querySelector('#Tsignup-form')
   .addEventListener('submit', trainerSignupFormHandler);
