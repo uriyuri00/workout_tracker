@@ -13,3 +13,9 @@ router.get('/', (req, res) => {
 
 
 module.exports = router;
+// const router = require('express').Router()
+// const publicRoutes = require('./public')
+
+// router.use(publicRoutes)
+
+// module.exports = router
