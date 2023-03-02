@@ -1,17 +1,20 @@
-{{#each posts as |post| }}
-
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{username}}!</h2>
-  </div>
-  <div class="card">
-    <h5 class="card-title">{{post.title}}</h5> 
-  <div class="card-body">
-    <p class="card-text">{{post.post_text}}</p>
-    <div class="card">
-          <a href="/dashboard" class="btn btn-primary">Comment</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{pageTitle}}</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Welcome to {{pageName}}</h1>
+        <p>{{pageDescription}}</p>
+      </div>
+      <div class="col-sm-6">
+        <img src="{{photoPath}}" alt="{{photoAltText}}">
+      </div>
     </div>
-  </div>
-</div>
-</div>
-{{/each}}
+  </body>
+</html>
+
+
