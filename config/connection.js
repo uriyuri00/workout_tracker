@@ -12,6 +12,9 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
+      define: {
+        timestamps: false
+      },
       port: 3306
     }
   );
