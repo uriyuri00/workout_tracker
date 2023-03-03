@@ -29,7 +29,7 @@ const withAuth = require('../utils/auth');
 //   // }
 // });
 
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
   const data = {
     pageTitle: 'Fitness Tracker',
     pageName: 'Fitness Tracker',
@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
@@ -49,7 +49,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
@@ -58,7 +58,7 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/trainer-signup", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
