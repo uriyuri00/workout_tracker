@@ -33,9 +33,8 @@ router.get('/home', (req, res) => {
   const data = {
     pageTitle: 'Fitness Tracker',
     pageName: 'Fitness Tracker',
-    pageDescription: 'Track your fitness goals with our app!',
-    photoPath: 'https://example.com/fitness-photo.jpg',
-    photoAltText: 'Fitness photo'
+    pageDescription: 'Make your fitness inspo come to life with our fitness app! Logging your workouts can help keep your workouts organized, saved, and help keep you accountable. To get started today click the Sign Up button above.'
+    
   };
   res.render('home', data);
 });
