@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
       include: [
         {
           model: Post,
-          attributes: ['id', 'title', 'body', 'created_at']
+          attributes: ['id', 'title', 'body']
         },
        /* {
           model: Trainer,
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
         },*/
         {
             model: Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment_text', 'post_id', 'user_id'],
             include: {
                 model: Post,
                 attributes: ['title']
@@ -76,20 +76,19 @@ router.post('/', (req, res) => {
     });
 });
 
-router.post('/login',  (req, res) => {
+router.post('/login', (req, res) => {
     User.findOne({
         where: {
-        email: req.body.email
+        username: req.body.username
         }
     }).then(dbUserData => {
+      console.log(dbUserData)
         if (!dbUserData) {
-        res.status(400).json({ message: 'No user found with this e-mail!' });
-        return;
+        res.status(400).json({ message: 'No user found with this username' });
         }
         const validPassword = dbUserData.checkPassword(req.body.password);
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
-            return;
         }
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
