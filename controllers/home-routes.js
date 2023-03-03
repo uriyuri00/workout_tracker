@@ -63,7 +63,7 @@ router.get("/trainer-signup", (req, res) => {
     return;
   }
 
-  res.render("signup");
+  res.render("trainer");
 });
 
 module.exports = router;
