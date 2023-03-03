@@ -2,18 +2,18 @@
 const trainerSignupFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-    const certification = document.querySelector('#certification-signup').value.trim();
-    const speciatly = document.querySelector('#speciatly-signup').value.trim();
+    const username = document.querySelector('#inputUsername3').value.trim();
+    const email = document.querySelector('#inputEmail3').value.trim();
+    const password = document.querySelector('#inputPassword3').value.trim();
+    const certification = document.querySelector('#inputCertification3').value.trim();
+    const speciatly = document.querySelector('#inputSpecialty3').value.trim();
 
 
   
-    if (name && email && password && certification && speciatly) {
-      const response = await fetch('/api/users', {
+    if (username && email && password && certification && speciatly) {
+      const response = await fetch('/api/users/signup', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password,certification,speciatly }),
+        body: JSON.stringify({ username, email, password,certification,speciatly }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -26,5 +26,5 @@ const trainerSignupFormHandler = async (event) => {
   };
 
   document
-  .querySelector('.signup-form')
+  .querySelector('#Tsignup-form')
   .addEventListener('submit', trainerSignupFormHandler);
