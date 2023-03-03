@@ -29,7 +29,7 @@ const withAuth = require('../utils/auth');
 //   // }
 // });
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
   const data = {
     pageTitle: 'Fitness Tracker',
     pageName: 'Fitness Tracker',

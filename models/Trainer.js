@@ -23,8 +23,8 @@ Trainer.init (
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "user",
-                key: "id",
+                model: 'user',
+                key: 'id',
             },
         },
     },
@@ -33,7 +33,7 @@ Trainer.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "trainer",
+        modelName: 'trainer',
     }
 );
 
