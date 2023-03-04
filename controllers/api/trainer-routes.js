@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
                 });
             });
 
-            const validPassword = dbUserData.checkPassword(req.body.password);
+            const validPassword = dbUserData.chkPassword(req.body.password);
 
             if (!validPassword) {
                 res.status(400).json({

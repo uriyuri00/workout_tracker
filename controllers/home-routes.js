@@ -1,33 +1,33 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Post, User, Comment, Trainer } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/', withAuth, async (req, res) => {
-//   const data = {
-//     pageTitle: 'Fitness Tracker',
-//     pageName: 'Fitness Tracker',
-//     pageDescription: 'Track your fitness goals with our app!',
-//     photoPath: 'https://example.com/fitness-photo.jpg',
-//     photoAltText: 'Fitness photo'
-//   };
-//   res.render('home', data);
+router.get('/', withAuth, async (req, res) => {
+  const data = {
+    pageTitle: 'Fitness Tracker',
+    pageName: 'Fitness Tracker',
+    pageDescription: 'Track your fitness goals with our app!',
+    photoPath: 'https://example.com/fitness-photo.jpg',
+    photoAltText: 'Fitness photo'
+  };
+  res.render('home', data);
 
-//   // try {
-//   //   const userData = await User.findAll({
-//   //     attributes: { exclude: ['password'] },
-//   //     order: [['username', 'ASC']],
-//   //   });
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['username', 'ASC']],
+    });
 
-//   //   const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((project) => project.get({ plain: true }));
 
-//   //   res.render('home', {
-//   //     users,
-//   //     logged_in: req.session.logged_in,
-//   //   });
-//   // } catch (err) {
-//   //   res.status(500).json(err);
-//   // }
-// });
+    res.render('home', {
+      users,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/home', (req, res) => {
   const data = {
