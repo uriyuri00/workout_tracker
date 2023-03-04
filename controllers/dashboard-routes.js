@@ -40,16 +40,16 @@ router.get('/', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
-/*
+
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'title', 'body', 'created_at' ],
+            attributes: ['id', 'title', 'body'],
             include: [{
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    attributes: ['id', 'comment_text', 'post_id', 'user_id'],
                     include: {
                         model: User,
                         attributes: ['username']
@@ -83,7 +83,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 })
-*/
+
 router.get('/new', (req, res) => {
     res.render('add-post', {
         loggedIn: true

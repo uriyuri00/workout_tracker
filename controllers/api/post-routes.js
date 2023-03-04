@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment, Trainer } = require('../../models');
-//const sequelize = require('../../config/connection');
+const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
 
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Trainer,
-                attributes:['specialty','certification']
+                attributes:['username','specialty','certification']
             },
             {
                 model: Comment,
@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
         {
 
             model: Trainer,
-            attributes:['specialty','certification']
+            attributes:['username','specialty','certification']
         },
         {
             model: Comment,
@@ -76,7 +76,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
-        post_text: req.body.post_text,
+        body: req.body.body,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
@@ -87,7 +87,8 @@ router.post('/', withAuth, (req, res) => {
 });
 
 router.put('/:id', withAuth, (req, res) => {
-    Post.update(req.body,
+   // Post.update({title:req.body.title,},
+   Post.update(req.body,
         {
             where: {
                 id: req.params.id

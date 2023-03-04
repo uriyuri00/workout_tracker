@@ -86,7 +86,7 @@ router.post('/login', (req, res) => {
         if (!dbUserData) {
         res.status(400).json({ message: 'No user found with this username' });
         }
-        const validPassword = dbUserData.checkPassword(req.body.password);
+        const validPassword = dbUserData.checkPw(req.body.password);
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
         }

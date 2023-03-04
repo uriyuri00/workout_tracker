@@ -1,5 +1,5 @@
 
-const trainerSignupFormHandler = async (event) => {
+async function signupFormHandler(event)  {
     event.preventDefault();
   
     const username = document.querySelector('#inputUsername3').value.trim();
