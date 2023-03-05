@@ -11,6 +11,10 @@ User.hasOne(Trainer, {
   foreignKey: "user_id"
 });
 
+Post.belongsTo(Trainer, {
+  foreignKey: "user_id"
+})
+
 Post.belongsTo(User, {
   foreignKey: "user_id"
 });
