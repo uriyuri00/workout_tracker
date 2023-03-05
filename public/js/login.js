@@ -49,6 +49,12 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
+
+// event listener for logout button that was created in the login handlebars
+document.getElementById('logoutBtn').addEventListener('click', function(event) {
+  event.preventDefault();
+});
+
   
   // document
   //   .querySelector('.signup-form')
