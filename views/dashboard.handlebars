@@ -32,9 +32,14 @@
                 {{/if}}
             </div>
     </div>
+              {{#if loggedIn}}
+          <button type="button" class="btn btn-danger" id="logoutBtn">Logout</button>
+          {{/if}}
 </div>
+
 
 
 <script src="/js/upload.js"></script>
 <script src="/js/add-post.js"></script>
+<script src="/js/logout.js"></script>
 {{!-- <script src="/js/create-post.js" ></script> --}}
