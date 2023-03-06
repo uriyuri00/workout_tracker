@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,9 +34,9 @@
             <a class="nav-link" href="/dashboard">Dashboard</a>
             <a class="nav-link" href="/signup">Sign Up</a>
             <a class="nav-link" href="/login">Login</a>
-          {{#if logged_in}}
-            <a class="nav-link" id="logout" href="/logout">logout</a>
-          {{/if}}
+            {{#if logged_in}}
+            <a class="nav-link" id="logout" href="/logout">Logout</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -46,9 +47,9 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-      <!-- if the user is logged in -->
-     {{#if logged_in}}
-    <script src="/js/logout.js">logout</script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
     {{/if}}
   </body>
 </html>
+
