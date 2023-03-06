@@ -12,12 +12,17 @@ function submitForm(event) {
   console.log(file.files);
 
   const formData = new FormData();
+  console.log("Formdata test")
+ alert("title " + title.value);
+  alert("description "+ description.value);
+  alert("file "+ file.files[0]);
+
 
   formData.append("title", title.value);
   formData.append("description", description.value);
   formData.append("file", file.files[0]);
-
-  fetch("/api/posts", {
+alert("form data "+formData);
+  fetch("/api/post", {
     method: "POST",
     body: formData,
   })
