@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['id','title','body'],
+        attributes: ['id','title','text','imgUrl'],
         include: [
             {
                 model: User,
@@ -38,11 +38,11 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes: ['id','title','body','user_id',],
+      attributes: ['id','title','text','imgUrl','user_id'],
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username','email','password', 'is_trainer']
         },
         {
 
@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
             attributes: ['id', 'comment_text', 'user_id', 'post_id'],
             include: {
                 model: User,
-                attributes: ['username']
+                attributes: ['username','email','password', 'is_trainer']
             }
         }
       ]
@@ -73,9 +73,11 @@ router.get('/:id', (req, res) => {
   });
 
 router.post('/', withAuth, (req, res) => {
+  
     Post.create({
         title: req.body.title,
-        body: req.body.body,
+        text: req.body.text,
+        imgUrl:req.body.imgUrl,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))

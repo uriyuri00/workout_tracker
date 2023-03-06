@@ -24,6 +24,7 @@ const createPost = async (req, res) => {
       title: req.body.title,
       text: req.body.description,
       imgUrl: image.secure_url,
+      
     });
 
     // Delete the uploaded image from our server
