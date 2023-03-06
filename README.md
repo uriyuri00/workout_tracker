@@ -1,6 +1,5 @@
 # workout_tracker
-
-## Table of Content 📖
+## Table of Content :book:
   - [Description](#description)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
@@ -13,21 +12,15 @@
   - [Reach-me](#reach-me)
   - [GitHub-name](#github-name)
   - [Video-Link](#video-link)
-
 ## Description
 [-- Add notes--]
-
 ## User Story
-
 ```md
 As a user who wants to exercise
 I want to be able to track my workouts and get feedback
 This will be solved once I find a website that can let me document my workouts and receive feedback on them
-
 ```
-
 ## Acceptance Criteria
-
 ```md
 GIVEN a Workout Trainer site
 WHEN I visit the site for the first time
@@ -63,38 +56,23 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
-
 ## Installation
-
 [-- Add notes--]
-
 ## Credit
-
-
 [-- Add notes--]
-
 ## Mock-Up
-
 [-- Add notes--]
-
 ### Database Models
-
 [-- Add notes--]
-
 ## Additional-Info
-
 [-- Add notes--]
-
 ## Reach-me
-
 [-- Add notes--]
-
 ## GitHub-name
-
 [-- Add notes--]
-
 ## Video-Link
-
 [-- Add link--]
+
+
 
 
