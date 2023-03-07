@@ -1,34 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const createPostButton = document.querySelector('#post-btn');
-    const newPostForm = document.querySelector('#post-form');
-    const fileInput = document.querySelector('#file');
-    
-    createPostButton.addEventListener('submit', (event) => {
-      event.preventDefault();
-      newPostForm.classList.toggle('d-block');
-    });
-    
-    // newPostForm.addEventListener('submit', async (event) => {
-    //   event.preventDefault();
-    
-    //   try {
-    //     const response = await fetch('/api/posts', {
-    //       method: 'POST',
-    //       body: formData
-    //     });
-  
-    //     if (response.ok) {
-    //       location.reload();
-    //     } else {
-    //       throw new Error('Failed to create a post.');
-    //     }
-    //   } catch (error) {
-    //     console.error(error);
-    //     alert('Failed to create post.'+ error);
-    //   }
-    // });
-    
     async function getPosts() {
       try {
         const response = await fetch('/api/posts');

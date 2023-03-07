@@ -30,6 +30,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
+            <a>
+                            {{#if loggedIn}}
+          <button type="button" class="btn btn-danger" id="logoutBtn">Logout</button>
+          {{/if}}
+            </a>
             <a class="nav-link active" aria-current="page" href="/home">Home</a>
             <a class="nav-link" href="/dashboard">Dashboard</a>
             <a class="nav-link" href="/signup">Sign Up</a>
