@@ -6,10 +6,6 @@
                 <h2>Your Dashboard</h2>
                 <ul>
                     {{#each posts as |post|}}
-                    <li>
-                        {{post-info post}}
-                        <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
-                    </li>
                     {{/each}}
                 </ul>
             </section>
@@ -32,9 +28,6 @@
                 {{/if}}
             </div>
     </div>
-              {{#if loggedIn}}
-          <button type="button" class="btn btn-danger" id="logoutBtn">Logout</button>
-          {{/if}}
 </div>
 
 

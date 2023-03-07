@@ -22,7 +22,7 @@ function submitForm(event) {
   formData.append("description", description.value);
   formData.append("file", file.files[0]);
 alert("form data "+formData);
-  fetch("/api/post", {
+  fetch("/api/posts", {
     method: "POST",
     body: formData,
   })
