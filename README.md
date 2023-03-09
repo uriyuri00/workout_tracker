@@ -9,11 +9,13 @@
   - [Database Models](#database-models)
   - [Associations](#associations)
   - [Additional-Info](#additional-info)
-  - [Reach-me](#reach-me)
   - [GitHub-name](#github-name)
-  - [Video-Link](#video-link)
+
 ## Description
-[-- Add notes--]
+
+## Heroku
+  - https://guarded-lowlands-52633.herokuapp.com
+
 ## User Story
 ```md
 As a user who wants to exercise
@@ -56,18 +58,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
-## Installation
-[-- Add notes--]
-## Credit
-[-- Add notes--]
-## Mock-Up
-[-- Add notes--]
-### Database Models
-[-- Add notes--]
-## Additional-Info
-[-- Add notes--]
-## Reach-me
-[-- Add notes--]
+
 ## GitHub-name
 [-- Add notes--]
 ## Video-Link
