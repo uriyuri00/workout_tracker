@@ -4,15 +4,11 @@
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
   - [Installation](#installation)
-  - [Credit](#credit)
-  - [Mock-Up](#mock-up)
-  - [Database Models](#database-models)
-  - [Associations](#associations)
-  - [Additional-Info](#additional-info)
+ 
   - [GitHub-name](#github-name)
 
 ## Description
-
+  Fitness tracker is the app for you! On this website, you can post your workouts, get comments and updates from professional fitness trainers, and keep yourself and others up to date with your workouts and fitness lifestyle! Professionals and beginners alike, having the ability to document your workout routine and receive feedback is incredibly useful!
 ## Heroku
   - https://guarded-lowlands-52633.herokuapp.com
 
@@ -60,9 +56,14 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 ## GitHub-name
-[-- Add notes--]
-## Video-Link
-[-- Add link--]
+https://github.com/uriyuri00
+
+https://github.com/ColtonTO
+
+https://github.com/Jessyjdi
+
+https://github.com/silvam22)
+
 
 
 
